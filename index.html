@@ -1,0 +1,325 @@
+<html>
+  <head>
+    <title>Zhechang's Home Page</title>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <style type="text/css">
+      body {
+        margin: auto;
+        padding: auto;
+        width: 1024px;
+
+        color: #2E3436;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.4em;
+      }
+
+      .collapsible {
+        cursor: pointer;
+      }
+
+      .collapsible:hover {
+        background-color: #f1f1f1;
+      }
+
+      .collapsible:hover::after {
+        font-weight: bold;
+        float: right;
+        content: '\2913';
+      }
+
+      .active::after {
+        font-weight: bold;
+        float: right;
+        content: "\2912";
+      }
+
+      .active:hover::after {
+        font-weight: bold;
+        float: right;
+        content: "\2912";
+      }
+
+      .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+      }
+
+      pre {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 4px;
+        border-color: lightgrey;
+        padding: 5px 5px 5px 5px;
+        overflow: auto;
+        background-color: #f1f1f1
+      } 
+
+      .pub-title {
+        font-size: medium;
+        font-weight: bold;
+        float:left;
+      }
+      .pub-links {
+        font-weight: bold;
+        float:right;
+      }
+      .pub-conf {
+        font-size: medium;
+        font-style: italic;
+      }
+      .pub-author {
+        font-size: medium;
+      }
+
+      img { vertical-align: bottom; }
+  
+      a {  color: #008cba; text-decoration: none; }
+
+      li { margin-bottom: 15px; }
+    </style> 
+  </head>
+
+  <body bgcolor="#ffffff">
+    <table border="0">
+      <tbody>
+      <tr height="5"></tr>
+      <tr>
+        <td>
+          <img align="middle" border="0" src="images/photo.jpg" width="220" class="imgborder">
+        </td>
+        <td width="30">
+          <br>
+        </td>
+        <td align="left">
+          <p> <h2> Zhechang Zhang </h2></p>
+          Ph.D. Student<br>
+          College of Information Sciences and Technology<br>
+          The Pennsylvania State University<br><br>
+          E-mail: zbz5352 at psu dot edu<br>
+          <!--
+          <br>
+          <a href=cv/cv.pdf.html>CV</a>
+          ---
+          <a href=https://scholar.google.com/citations?user=3aaJwkoAAAAJ&hl=en>Google Scholar</a>
+          ---
+          <a href="https://twitter.com/huhong789?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Twitter</a>
+          <br>
+          -->
+        </td>
+      </tr></tbody>
+    </table>
+  
+    <hr>
+    <strong>Short Bio:</strong>
+    I am a first-year Ph.D. student at <a href="https://www.psu.edu/">Penn State University</a>, advised by <a href="https://huhong789.github.io/">Prof. Hong Hu</a>. 
+    Before joining Penn State University, I obtained my Bachelor's degree and Master's degree from Huazhong University of Science and Technology, advised by <a href="http://faculty.hust.edu.cn/zoudeqing/en/index.htm">Prof. Deqing Zou</a> and <a href="http://faculty.hust.edu.cn/yuanbin12/en/index.htm">Prof. Bin Yuan</a>.
+    <br><br>
+
+    <hr>
+    <h2>Publications</h2>
+    <ol reversed>
+
+    </div>
+    <li class=collapsible>
+      <span class=pub-title>
+        VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks
+      </span>
+      <!--
+      <span class=pub-links>
+        <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
+      </span>
+      -->
+      <br>
+      <span class=pub-author>
+        Hengkai Ye, Song Liu, <b>Zhechang Zhang</b> and Hong Hu
+      </span>
+      <br>
+      In <span class=pub-conf>
+        Proceedings of the 32nd USENIX Security Symposium (USENIX 2023) 
+      </span>
+    </li>
+    <div class=content>
+      As control-flow protection techniques are widely deployed,
+      it is difficult for attackers to modify control data, like function
+      pointers, to hijack program control flow. Instead, data-only attacks corrupt security-critical non-control data (critical data),
+      and can bypass all control-flow protections to revive severe attacks. Previous works have explored various methods to help
+      construct or prevent data-only attacks. However, no solution
+      can automatically detect program-specific critical data.
+      In this paper, we identify an important category of critical
+      data, syscall-guard variables, and propose a set of solutions
+      to automatically detect such variables in a scalable manner.
+      Syscall-guard variables determine to invoke security-related
+      system calls (syscalls), and altering them will allow attackers
+      to request extra privileges from the operating system. We
+      propose branch force, which intentionally flips every conditional branch during the execution and checks whether new
+      security-related syscalls are invoked. If so, we conduct dataflow analysis to estimate the feasibility to flip such branches
+      through common memory errors. We build a tool, VIPER, to
+      implement our ideas. VIPER successfully detects 34 previously unknown syscall-guard variables from 13 programs.
+      We build four new data-only attacks on sqlite and v8, which
+      execute arbitrary command or delete arbitrary file. VIPER
+      completes its analysis within five minutes for most programs,
+      showing its practicality for spotting syscall-guard variables
+      <br/>
+      <p></p>
+    </div>
+
+      </div>
+      <li class=collapsible>
+        <span class=pub-title>
+          StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance
+        </span>
+        <!--
+        <span class=pub-links>
+          <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
+        </span>
+        -->
+        <br>
+        <span class=pub-author>
+          <b>Zhechang Zhang</b>, Bin Yuan, Kehan Yang, Deqing Zou and Hai Jin
+        </span>
+        <br>
+        In <span class=pub-conf>
+          Proceedings of the 38th Annual Computer Security Applications Conference (ACSAC 2022) 
+        </span>
+      </li>
+      <div class=content>
+        Deep Packet Inspection (DPI) systems are essential for securing modern networks (e.g., blocking or logging abnormal network con- nections). 
+        However, DPI systems are known to be vulnerable in their implementations, which could be exploited for evasion attacks. 
+        Due to the critical role DPI systems play, many efforts have been made to detect vulnerabilities in the DPI systems through manual inspection,
+        symbolic execution, and fuzzing, which suffer from either poor scalability, path explosion, or inappropriate feedback. 
+        In this paper, based on our observation that a DPI system usually reaches an abnormal internal state before a forbidden packet passes through it, 
+        we propose a fuzzing framework that prioritizes inputs/mutations which could trigger the DPI system’s abnormal internal states. 
+        Further, to avoid deep understanding of the DPI systems under inspection (e.g., to identify the abnormal states), 
+        we feed one pair of inputs to multiple DPI systems and check whether the state changes of these DPI systems are consistent — an inconsistent 
+        internal state change/transference in one of the DPI systems indicates a new abnormal state is reached in the corresponding DPI system. 
+        Naturally, inputs that trigger new abnormal states are preferentially selected for mutations to generate new inputs. Following this idea, we develop StateDiver, 
+        the first fuzzing framework that uses the state discrepancy between different DPI systems as feedback to find more bypassing strategies.
+        We make StateDiver publicly available online. With the help of StateDiver, we tested 3 famous open-source DPI systems (Snort, Snort++, and Suricata) 
+        and discovered 16 bypass strategies (8 new and 8 previously known). We have reported all the vulnerabilities to the vendors and received one 
+        CVE by the time of paper writing. We also compared State- Diver with Geneva, the state-of-the-art fuzzing tool for detecting DPI bugs. 
+        Results showed that StateDiver outperformed Geneva at the number and speed of finding vulnerabilities, indicating the ability of StateDiver 
+        to detect strategies bypassing DPI systems effectively.
+
+        <br/>
+        <p></p>      
+      </div>
+
+
+    </ol>
+    <hr>
+<!--
+    <h2>Experience</h2>
+    <ul>
+      <li><strong>Teaching Assistant</strong><br>
+        IST 454 Computer and Cyber Forensics
+        <span style="float:right;">[Fall 2022, Fall 2023]</span><br>
+      </li>
+      <li><strong>External Reviewer</strong><br>
+        ACM Conference on Computer and Communications Security (CCS)
+        <span style="float:right;">[2022]</span><br>
+        Network and Distributed System Security Symposium (NDSS)
+        <span style="float:right;">[2023]</span><br>
+      </li>
+    </ul>
+    <hr>
+
+    <h2>Personal</h2>
+    <ul>
+      <li>I like watching basketball games (especially Win or Go Home games). I am a huge fan of Golden State Warriors.<br>
+      
+      </li>
+    </ul>
+    <hr>
+
+-->
+
+  <script>
+    function collapse_it(c, i) {
+      console.log(coll);
+      console.log(i)
+      c[i].classList.toggle("active");
+      var content = c[i].nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+
+      var j;
+      for (j = 0; j < c.length; j++) {
+        if (j == i) continue;
+        var other_content = c[j].nextElementSibling;
+        if (other_content.style.display === "block") {
+          c[j].classList.toggle("active")
+          other_content.style.display = "none";
+        }
+      } 
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var index;
+
+    for (index = 0; index < coll.length; index++) {
+      coll[index].addEventListener("click", collapse_it.bind(null, coll, index));
+    }
+  </script>
+
+</html>
+
+
+<!--
+    <h2>Work Experience</h2>
+    <ul>
+      <li><strong>Assistant Professor</strong> [August 2020 - Present] <br>
+      College of Information Sciences and Technology, Pennsylvania State University
+      </li>
+
+      <li><strong>Research Scientist</strong> [February 2019 - August 2020] <br>
+      School of Computer Science, Georgia Institute of Technology
+      </li>
+
+      <li><strong>Postdoctoral Fellow</strong> [February 2017 - February 2019] <br>
+      School of Computer Science, Georgia Institute of Technology
+      </li>
+
+      <li><strong>Research Fellow</strong> [July 2016 - January 2017] <br>
+      National University of Singapore, Singapore
+      </li>
+
+    </ul>
+    <hr>
+
+    <h2>Professional Experience</h2>
+    <ul>
+      <li><strong>Program Committee Member</strong> <br>
+
+        ACM Conference on Computer and Communications Security (CCS)
+        <span style="float:right;">[2022]</span> <br>
+
+        Network and Distributed System Security Symposium (NDSS) 
+        <span style="float:right;">[2022]</span> <br>
+
+        ACM ASIA Conference on Computer and Communications Security (ASIACCS) 
+        <span style="float:right;">[2019, 2021, 2022]</span> <br>
+
+      </li>
+    </ul>
+    <hr>
+
+    <h2>Teaching Experience</h2>
+    <ul>
+      <li><strong>IST 454</strong> Computer and Cyber Forensics
+        <span style="float:right;">Fall 2020, Spring 2021, Fall 2021</span><br>
+      </li>
+    </ul>
+    <hr>
+
+    <br>
+    <br>
+
+  </body>
+-->
