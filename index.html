@@ -1,398 +1,375 @@
-<html>
-  <head>
-    <title>Zhechang's Home Page</title>
-    <meta http-equiv="Content-Language" content="en-us">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
 
-    <style type="text/css">
-      body {
-        margin: auto;
-        padding: auto;
-        width: 1024px;
+    Buttons and formatting for paper list from Pyrros Chaidos' website
+    http://www0.cs.ucl.ac.uk/staff/P.Chaidos/
+-->
 
-        color: #2E3436;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 15px;
-        line-height: 1.4em;
-      }
+<style>
+a.buttan:link, a.buttan:visited{
+    color: black;
+    padding: 0px 3px;
+    margin: 1px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid black;
+    position:relative;
+}
 
-      .collapsible {
-        cursor: pointer;
-      }
+a.nf:link, a.nf:visited, .nf {
+    background-color: #b1d2ac;
+}
+a.nf:hover, a.nf:active {
+    background-color: #b1d2ac;
+}
+a.free:link, a.free:visited, .free {
+    background-color: #89C5EA;
+}
+a.free:hover, a.free:active, {
+    background-color: #89C5EA;
+}
+a.talk:link, a.talk:visited, .talk {
+    background-color: #89C5EA;
+}
+a.talk:hover, a.talk:active, {
+    background-color: #89C5EA;
+}
+a.aux:link, a.aux:visited, .aux {
+    background-color: #A08E7A;
+    color: white;
+}
 
-      .collapsible:hover {
-        background-color: #f1f1f1;
-      }
 
-      .collapsible:hover::after {
-        font-weight: bold;
-        float: right;
-        content: '\2913';
-      }
 
-      .active::after {
-        font-weight: bold;
-        float: right;
-        content: "\2912";
-      }
+ul.vert {
+    border-left: 0px solid red;
+    background-color: #f1f1f1;
+    list-style-type: none;
+}
+ul.vert >li {
+    border-left: 10px solid #d1d1d1;
+    background-color: #f1f1f1;
+    list-style-type: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    margin-left: -45px;
+}
+a.buttan:after{
+    padding: 5px;
+    display:none;
+    position: absolute;
+    text-align: center;
+    color: #111111;
+    top:-30px;
+    right:30px;
+    width:200px;
+    background-color: #fef4c5;
+    border: 1px solid #d4b943;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+	z-index: 98;
+}
+a.buttan:hover:after{
+    display: block;
+}
 
-      .active:hover::after {
-        font-weight: bold;
-        float: right;
-        content: "\2912";
-      }
+h2 {
+    font-weight: 100;
+}
 
-      .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-      }
+/* LAYOUT CSS */
+.pure-img-responsive {
+    max-width: 100%;
+    height: auto;
+}
 
-      pre {
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 4px;
-        border-color: lightgrey;
-        padding: 5px 5px 5px 5px;
-        overflow: auto;
-        background-color: #f1f1f1
-      } 
+#layout {
+    padding: 0;
+}
 
-      .pub-title {
-        font-size: medium;
-        font-weight: bold;
-        float:left;
-      }
-      .pub-links {
-        font-weight: bold;
-        float:right;
-      }
-      .pub-conf {
-        font-size: medium;
-        font-style: italic;
-      }
-      .pub-author {
-        font-size: medium;
-      }
+.header {
+    text-align: center;
+    top: auto;
+    margin: 3em auto;
+}
 
-      img { vertical-align: bottom; }
+.sidebar {
+    background: rgb(61, 79, 93);
+    color: #fff;
+}
+
+.brand-title,
+.brand-tagline {
+    margin: 0;
+}
+.brand-tagline {
+    font-weight: 300;
+    color: rgb(176, 202, 219);
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.nav-item a {
+    background: transparent;
+    border: 2px solid rgb(176, 202, 219);
+    color: #fff;
+    margin-top: 1em;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+.nav-item a:hover,
+.nav-item a:focus {
+    border: 2px solid rgb(61, 146, 201);
+    text-decoration: none;
+}
+
+.content-subhead {
+    text-transform: uppercase;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    font-size: 80%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.content {
+    padding: 2em 1em 0;
+}
+
+.post {
+    padding-bottom: 2em;
+}
+.h2 {
+    font-size: 2em;
+    color: #222;
+    margin-bottom: 0.2em;
+}
+
+p {
+    font-family: Georgia, "Cambria", serif;
+    color: #444;
+    line-height: 1.8em;
+}
+.post-meta {
+    color: #999;
+    font-size: 90%;
+    margin: 0;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+    .post-category-design {
+        background: #5aba59;
+    }
+    .post-category-pure {
+        background: #4d85d1;
+    }
+    .post-category-yui {
+        background: #8156a7;
+    }
+    .post-category-js {
+        background: #df2d4f;
+    }
+
+.post-images {
+    margin: 1em 0;
+}
+.post-image-meta {
+    margin-top: -3.5em;
+    margin-left: 1em;
+    color: #fff;
+    text-shadow: 0 1px 1px #333;
+}
+
+.footer {
+    text-align: center;
+    padding: 1em 0;
+}
+.footer a {
+    color: #ccc;
+    font-size: 80%;
+}
+.footer .pure-menu a:hover,
+.footer .pure-menu a:focus {
+    background: none;
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding: 2em 3em 0;
+        margin-left: 25%;
+    }
+
+    .header {
+        margin: 80% 2em 0;
+        text-align: right;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+    .nav-item {
+    display:block;    
+    }
+
+}
+
+<!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="firstcss.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+
+</style>
+
+  <link rel="stylesheet" href="pure-min.css">
+  <link rel="stylesheet" href="grids-responsive-min.css">
+
+<html lang="en">
+<head>
+  <title>Zhechang Zhang</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="firstcss.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#others">Others</a></li>
+              <li><a href="./CV_24_08.pdf", target='_blank'>CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
   
-      a {  color: #008cba; text-decoration: none; }
+  <!-- Page Content -->
+    <div class="container">
 
-      li { margin-bottom: 15px; }
-    </style> 
-  </head>
+        <div class="row">
 
-  <body bgcolor="#ffffff">
-    <table border="0">
-      <tbody>
-      <tr height="5"></tr>
-      <tr>
-        <td>
-          <img align="middle" border="0" src="images/photo_new.jpg" width="220" class="imgborder">
-        </td>
-        <td width="30">
-          <br>
-        </td>
-        <td align="left">
-          <p> <h2> Zhechang Zhang </h2></p>
-          Ph.D. Student<br>
-          College of Information Sciences and Technology<br>
-          The Pennsylvania State University<br><br>
-          E-mail: zbz5352 at psu dot edu<br>
-          <!--
-          <br>
-          <a href=cv/cv.pdf.html>CV</a>
-          ---
-          <a href=https://scholar.google.com/citations?user=3aaJwkoAAAAJ&hl=en>Google Scholar</a>
-          ---
-          <a href="https://twitter.com/huhong789?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Twitter</a>
-          <br>
-          -->
-        </td>
-      </tr></tbody>
-    </table>
-  
-    <hr>
-    <strong>Short Bio:</strong>
+            <!-- Entries Column -->
+            <div class="col-md-8">
+                
+                <!-- Main Image -->
+                <img class="img-responsive" src="photo.jpg" width="300" height="50" alt=""><br>
+                
+                <p style="margin-top:3%; text-align:justify;">
+			
     I am a <del>first</del>, second-year Ph.D. student at <a href="https://www.psu.edu/">Penn State University</a>, advised by <a href="https://huhong789.github.io/">Prof. Hong Hu</a>. 
     Before joining Penn State University, I obtained my Bachelor's degree and Master's degree from Huazhong University of Science and Technology, advised by <a href="http://faculty.hust.edu.cn/zoudeqing/en/index.htm">Prof. Deqing Zou</a> and <a href="http://faculty.hust.edu.cn/yuanbin12/en/index.htm">Prof. Bin Yuan</a>.
     My research interests include software and system security.
-    <br><br>
+            </div> 
 
-    <hr>
-    <h2>Publications</h2>
-    <ol reversed>
+            <!-- Contact Info on the Sidebar -->
+            <div class="col-md-4">
+                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;">Zhechang Zhang</div></b><br>
+                <p><b>zbz5352 at psu dot edu</b><br>
+			<p>Ph.D. student in the <a HREF="https://ist.psu.edu/">College of Information Sciences and Technology (IST)</a> at <a HREF="https://www.psu.edu/">Penn State University</a>.
+                </p>
+            </div>
+            
 
-    </div>
-    <li class=collapsible>
-      <span class=pub-title>
-        CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel
-      </span>
-      <!--
-      <span class=pub-links>
-        <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
-      </span>
-      -->
-      <br>
-      <span class=pub-author>
-        Shuangpeng Bai, <b>Zhechang Zhang</b>, and Hong Hu
-      </span>
-      <br>
-      In <span class=pub-conf>
-        Proceedings of the 31st ACM Conference on Computer and Communications Security (CCS 2024).
-      </span>
-    </li>
-    <div class=content>
-      Kernel use-after-free (UAF) bugs are severe threats to system security due to their complex root causes and high exploitability. 
-      We find that 36.1% of recent kernel UAF bugs are caused by improper uses of reference counters, dubbed refcount-related UAF bugs. 
-      Current kernel fuzzing tools based on code coverage can detect common memory errors, but none of them is aware of the root cause. 
-      As a consequence, they only trigger refcount-related UAF bugs passively and coincidentally, and may miss many deep hidden vulnerabilities.
-      <br><br>
-      To actively trigger refcount-related UAF bugs, in this paper, we propose CountDown, a novel refcount-guided kernel fuzzer. 
-      CountDown collects diverse refcount operations from kernel executions and reshapes syscall relations based on commonly accessed refcounts. 
-      When generating user-space programs, CountDown prefers to combine syscalls that ever access the same refcounts, aiming to trigger complex 
-      refcount behaviors. It also injects refcountdecreasing and refcount-accessing syscalls to intentionally free the refcounted object and 
-      trigger invalid accesses through dangling pointers. We test CountDown on mainstream Linux kernels and compare it with popular fuzzers. 
-      On average, our tool can detect 66.1% more UAF bugs and 32.9% more KASAN reports than stateof-the-art tools. CountDown has found nine new 
-      kernel memory bugs, where two are fixed and one is confirmed.
- 
-      <br/>
-      <p></p>
-    </div>
+            
+            <!-- Links on the Sidebar -->
+            
+	    <div class="col-md-8">	
+	    <!-- Old: <div class="col-md-8" style="height: 120vh;"> -->
+		<h2 id="publications">Publications</h2>
+            
+<p>See also <a HREF="https://scholar.google.com/citations?user=nJDYKUoAAAAJ">Google Scholar</a> and <a HREF="https://dblp.org/pid/334/9029.html">DBLP</a>.</p>
 
-    </div>
-    <li class=collapsible>
-      <span class=pub-title>
-        VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks
-      </span>
 
-      <span class=pub-links>
-        <a href="https://github.com/PSU-Security-Universe/viper"><img alt="Website" src="images/www.svg" height=15px></a>
-        <a href="slides/ye_viper-slides.pdf"><img alt="Slides" src="images/slides.svg" height=15px></a>
-        <a href="papers/ye_viper.pdf"><img alt="Paper" src="images/file.svg" height=15px></a>
-      </span>
-
-      <!--
-      <span class=pub-links>
-        <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
-      </span>
-      -->
-      <br>
-      <span class=pub-author>
-        Hengkai Ye, Song Liu, <b>Zhechang Zhang</b> and Hong Hu
-      </span>
-      <br>
-      In <span class=pub-conf>
-        Proceedings of the 32nd USENIX Security Symposium (USENIX 2023). [Acc Rate: 29%]
-      </span>
-    </li>
-    <div class=content>
-      As control-flow protection techniques are widely deployed,
-      it is difficult for attackers to modify control data, like function
-      pointers, to hijack program control flow. Instead, data-only attacks corrupt security-critical non-control data (critical data),
-      and can bypass all control-flow protections to revive severe attacks. Previous works have explored various methods to help
-      construct or prevent data-only attacks. However, no solution
-      can automatically detect program-specific critical data.
-      <br><br>
-      In this paper, we identify an important category of critical
-      data, syscall-guard variables, and propose a set of solutions
-      to automatically detect such variables in a scalable manner.
-      Syscall-guard variables determine to invoke security-related
-      system calls (syscalls), and altering them will allow attackers
-      to request extra privileges from the operating system. We
-      propose branch force, which intentionally flips every conditional branch during the execution and checks whether new
-      security-related syscalls are invoked. If so, we conduct dataflow analysis to estimate the feasibility to flip such branches
-      through common memory errors. We build a tool, VIPER, to
-      implement our ideas. VIPER successfully detects 34 previously unknown syscall-guard variables from 13 programs.
-      We build four new data-only attacks on sqlite and v8, which
-      execute arbitrary command or delete arbitrary file. VIPER
-      completes its analysis within five minutes for most programs,
-      showing its practicality for spotting syscall-guard variables.
-      <br/>
-      <p></p>
-    </div>
-
-      </div>
-      <li class=collapsible>
-        <span class=pub-title>
-          StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance
-        </span>
-
-        <span class=pub-links>
-          <a href="https://github.com/CGCL-codes/StateDiver"><img alt="Website" src="images/www.svg" height=15px></a>
-          <a href="slides/zhang_statediver_slides.pdf"><img alt="Slides" src="images/slides.svg" height=15px></a>
-          <a href="papers/zhang_statediver.pdf"><img alt="Paper" src="images/file.svg" height=15px></a>
-        </span>
+                <ul class="vert">
         
-        <!--
-        <span class=pub-links>
-          <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
-        </span>
-        -->
-        <br>
-        <span class=pub-author>
-          <b>Zhechang Zhang</b>, Bin Yuan, Kehan Yang, Deqing Zou and Hai Jin
-        </span>
-        <br>
-        In <span class=pub-conf>
-          Proceedings of the 38th Annual Computer Security Applications Conference (ACSAC 2022). [Acc Rate: 24.1%]
-        </span>
-      </li>
-      <div class=content>
-        Deep Packet Inspection (DPI) systems are essential for securing modern networks (e.g., blocking or logging abnormal network con- nections). 
-        However, DPI systems are known to be vulnerable in their implementations, which could be exploited for evasion attacks. 
-        Due to the critical role DPI systems play, many efforts have been made to detect vulnerabilities in the DPI systems through manual inspection,
-        symbolic execution, and fuzzing, which suffer from either poor scalability, path explosion, or inappropriate feedback. 
-        In this paper, based on our observation that a DPI system usually reaches an abnormal internal state before a forbidden packet passes through it, 
-        we propose a fuzzing framework that prioritizes inputs/mutations which could trigger the DPI system’s abnormal internal states. 
-        Further, to avoid deep understanding of the DPI systems under inspection (e.g., to identify the abnormal states), 
-        we feed one pair of inputs to multiple DPI systems and check whether the state changes of these DPI systems are consistent — an inconsistent 
-        internal state change/transference in one of the DPI systems indicates a new abnormal state is reached in the corresponding DPI system. 
-        Naturally, inputs that trigger new abnormal states are preferentially selected for mutations to generate new inputs. Following this idea, we develop StateDiver, 
-        the first fuzzing framework that uses the state discrepancy between different DPI systems as feedback to find more bypassing strategies.
-        We make StateDiver publicly available online. With the help of StateDiver, we tested 3 famous open-source DPI systems (Snort, Snort++, and Suricata) 
-        and discovered 16 bypass strategies (8 new and 8 previously known). We have reported all the vulnerabilities to the vendors and received one 
-        CVE by the time of paper writing. We also compared State- Diver with Geneva, the state-of-the-art fuzzing tool for detecting DPI bugs. 
-        Results showed that StateDiver outperformed Geneva at the number and speed of finding vulnerabilities, indicating the ability of StateDiver 
-        to detect strategies bypassing DPI systems effectively.
-        <br/>
-        <p></p>      
-      </div>
+        <li>
+                <strong>CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel</strong> <br>
+                Shuangpeng Bai, <b>Zhechang Zhang</b>, and Hong Hu.<br>
+                In Proceedings of the 31st ACM Conference on Computer and Communications Security<br>
+             <a class="buttan nf" href="https://1ncande5cence.github.io/">CCS 2024</a><br>
+		</li>
+                    
+        <li>
+                <strong>VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks</strong> <br>
+                Hengkai Ye, Song Liu, <b>Zhechang Zhang</b> and Hong Hu.<br>
+                In Proceedings of the 32nd USENIX Security Symposium<br>
+            <a class="buttan nf" href="https://dl.acm.org/doi/abs/10.5555/3620237.3620316">USENIX 2023</a><br>
+            <a class="buttan aux" href="https://github.com/PSU-Security-Universe/viper">Code</a>
+            <a class="buttan aux" href="slides/ye_viper-slides.pdf">Slides</a>
+            <a class="buttan aux" href="papers/ye_viper.pdf">PDF</a>
+		</li>
+
+        <li>
+                <strong>StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance</strong> <br>
+                <b>Zhechang Zhang</b>, Bin Yuan, Kehan Yang, Deqing Zou and Hai Jin.<br>
+                In Proceedings of the 38th Annual Computer Security Applications Conference<br>
+            <a class="buttan nf" href="https://dl.acm.org/doi/abs/10.1145/3564625.3564650">ACSAC 2022</a><br>
+            <a class="buttan aux" href="https://github.com/CGCL-codes/StateDiver">Code</a>
+            <a class="buttan aux" href="slides/zhang_statediver_slides.pdf">Slides</a>
+            <a class="buttan aux" href="papers/zhang_statediver.pdf">PDF</a>
+		</li>
 
 
-    </ol>
-    <hr>
 
-    <h3>Others</h3>
-    <ol reversed>
+            </div>
 
-      <li>
-        <span class=pub-title>
-          One Flip is All It Takes: Identifying Syscall-Guard Variables for Data-Only Attacks
-        </span> <br> (Industry Conference)
-        <span class=pub-links>
-          <a href="https://www.blackhat.com/asia-24/briefings/schedule/index.html#one-flip-is-all-it-takes-identifying-syscall-guard-variables-for-data-only-attacks-36285"><img alt="Paper" src="./images/www.svg" height=15px></a>
-        </span> 
-        <br>
-        Hengkai Ye, Song Liu, <b>Zhechang Zhang</b> and Hong Hu
-        <br>
-        <span class=pub-conf>
-          Black Hat Asia Briefings (Black Hat Asia 2024)
-        </span>
-      </li>
+            <div class="col-md-8">	
+		<h2 id="others">Others</h2>
+        <ul class="vert">
+                            
+        <li>
+                <strong>One Flip is All It Takes: Identifying Syscall-Guard Variables for Data-Only Attacks</strong> <br>
+                (Industry Conference) </br>
+                Hengkai Ye, Song Liu, <b>Zhechang Zhang</b> and Hong Hu.<br>
+                BlackHat Asia Briefings 2024<br>
+            <a class="buttan aux" href="https://www.blackhat.com/asia-24/briefings/schedule/index.html#one-flip-is-all-it-takes-identifying-syscall-guard-variables-for-data-only-attacks-36285">Link</a><br>
+		</li>
 
-    </ol>
-    <hr>
-<!--
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Teaching Assistant</strong><br>
-        IST 454 Computer and Cyber Forensics
-        <span style="float:right;">[Fall 2022, Fall 2023]</span><br>
-      </li>
-      <li><strong>External Reviewer</strong><br>
-        ACM Conference on Computer and Communications Security (CCS)
-        <span style="float:right;">[2022]</span><br>
-        Network and Distributed System Security Symposium (NDSS)
-        <span style="float:right;">[2023]</span><br>
-      </li>
-    </ul>
-    <hr>
 
-    <h2>Personal</h2>
-    <ul>
-      <li>I like watching basketball games (especially Win or Go Home games). I am a huge fan of Golden State Warriors.<br>
-      
-      </li>
-    </ul>
-    <hr>
+		</div>
+            
+        </div>
 
--->
+    
 
-  <script>
-    function collapse_it(c, i) {
-      console.log(coll);
-      console.log(i)
-      c[i].classList.toggle("active");
-      var content = c[i].nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-
-      var j;
-      for (j = 0; j < c.length; j++) {
-        if (j == i) continue;
-        var other_content = c[j].nextElementSibling;
-        if (other_content.style.display === "block") {
-          c[j].classList.toggle("active")
-          other_content.style.display = "none";
-        }
-      } 
-    }
-
-    var coll = document.getElementsByClassName("collapsible");
-    var index;
-
-    for (index = 0; index < coll.length; index++) {
-      coll[index].addEventListener("click", collapse_it.bind(null, coll, index));
-    }
-  </script>
+    <!-- /.container -->
+    
+    <!-- Other people may like it too! -->
+    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
+    
+</body>
 
 </html>
-
-
-<!--
-    <h2>Work Experience</h2>
-    <ul>
-      <li><strong>Assistant Professor</strong> [August 2020 - Present] <br>
-      College of Information Sciences and Technology, Pennsylvania State University
-      </li>
-
-      <li><strong>Research Scientist</strong> [February 2019 - August 2020] <br>
-      School of Computer Science, Georgia Institute of Technology
-      </li>
-
-      <li><strong>Postdoctoral Fellow</strong> [February 2017 - February 2019] <br>
-      School of Computer Science, Georgia Institute of Technology
-      </li>
-
-      <li><strong>Research Fellow</strong> [July 2016 - January 2017] <br>
-      National University of Singapore, Singapore
-      </li>
-
-    </ul>
-    <hr>
-
-    <h2>Professional Experience</h2>
-    <ul>
-      <li><strong>Program Committee Member</strong> <br>
-
-        ACM Conference on Computer and Communications Security (CCS)
-        <span style="float:right;">[2022]</span> <br>
-
-        Network and Distributed System Security Symposium (NDSS) 
-        <span style="float:right;">[2022]</span> <br>
-
-        ACM ASIA Conference on Computer and Communications Security (ASIACCS) 
-        <span style="float:right;">[2019, 2021, 2022]</span> <br>
-
-      </li>
-    </ul>
-    <hr>
-
-    <h2>Teaching Experience</h2>
-    <ul>
-      <li><strong>IST 454</strong> Computer and Cyber Forensics
-        <span style="float:right;">Fall 2020, Spring 2021, Fall 2021</span><br>
-      </li>
-    </ul>
-    <hr>
-
-    <br>
-    <br>
-
-  </body>
--->
