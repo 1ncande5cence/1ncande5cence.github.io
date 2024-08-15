@@ -115,7 +115,7 @@
   
     <hr>
     <strong>Short Bio:</strong>
-    I am a first-year Ph.D. student at <a href="https://www.psu.edu/">Penn State University</a>, advised by <a href="https://huhong789.github.io/">Prof. Hong Hu</a>. 
+    I am a <del>first</del>, second-year Ph.D. student at <a href="https://www.psu.edu/">Penn State University</a>, advised by <a href="https://huhong789.github.io/">Prof. Hong Hu</a>. 
     Before joining Penn State University, I obtained my Bachelor's degree and Master's degree from Huazhong University of Science and Technology, advised by <a href="http://faculty.hust.edu.cn/zoudeqing/en/index.htm">Prof. Deqing Zou</a> and <a href="http://faculty.hust.edu.cn/yuanbin12/en/index.htm">Prof. Bin Yuan</a>.
     My research interests include software and system security.
     <br><br>
@@ -127,8 +127,52 @@
     </div>
     <li class=collapsible>
       <span class=pub-title>
+        CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel
+      </span>
+      <!--
+      <span class=pub-links>
+        <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
+      </span>
+      -->
+      <br>
+      <span class=pub-author>
+        Shuangpeng Bai, <b>Zhechang Zhang</b>, and Hong Hu
+      </span>
+      <br>
+      In <span class=pub-conf>
+        Proceedings of the 31st ACM Conference on Computer and Communications Security (CCS 2024).
+      </span>
+    </li>
+    <div class=content>
+      Kernel use-after-free (UAF) bugs are severe threats to system security due to their complex root causes and high exploitability. 
+      We find that 36.1% of recent kernel UAF bugs are caused by improper uses of reference counters, dubbed refcount-related UAF bugs. 
+      Current kernel fuzzing tools based on code coverage can detect common memory errors, but none of them is aware of the root cause. 
+      As a consequence, they only trigger refcount-related UAF bugs passively and coincidentally, and may miss many deep hidden vulnerabilities.
+      <br><br>
+      To actively trigger refcount-related UAF bugs, in this paper, we propose CountDown, a novel refcount-guided kernel fuzzer. 
+      CountDown collects diverse refcount operations from kernel executions and reshapes syscall relations based on commonly accessed refcounts. 
+      When generating user-space programs, CountDown prefers to combine syscalls that ever access the same refcounts, aiming to trigger complex 
+      refcount behaviors. It also injects refcountdecreasing and refcount-accessing syscalls to intentionally free the refcounted object and 
+      trigger invalid accesses through dangling pointers. We test CountDown on mainstream Linux kernels and compare it with popular fuzzers. 
+      On average, our tool can detect 66.1% more UAF bugs and 32.9% more KASAN reports than stateof-the-art tools. CountDown has found nine new 
+      kernel memory bugs, where two are fixed and one is confirmed.
+ 
+      <br/>
+      <p></p>
+    </div>
+
+    </div>
+    <li class=collapsible>
+      <span class=pub-title>
         VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks
       </span>
+
+      <span class=pub-links>
+        <a href="https://github.com/PSU-Security-Universe/viper"><img alt="Website" src="images/www.svg" height=15px></a>
+        <a href="slides/ye_viper-slides.pdf"><img alt="Slides" src="images/slides.svg" height=15px></a>
+        <a href="papers/ye_viper.pdf"><img alt="Paper" src="images/file.svg" height=15px></a>
+      </span>
+
       <!--
       <span class=pub-links>
         <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
@@ -150,6 +194,7 @@
       and can bypass all control-flow protections to revive severe attacks. Previous works have explored various methods to help
       construct or prevent data-only attacks. However, no solution
       can automatically detect program-specific critical data.
+      <br><br>
       In this paper, we identify an important category of critical
       data, syscall-guard variables, and propose a set of solutions
       to automatically detect such variables in a scalable manner.
@@ -173,6 +218,13 @@
         <span class=pub-title>
           StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance
         </span>
+
+        <span class=pub-links>
+          <a href="https://github.com/CGCL-codes/StateDiver"><img alt="Website" src="images/www.svg" height=15px></a>
+          <a href="slides/zhang_statediver_slides.pdf"><img alt="Slides" src="images/slides.svg" height=15px></a>
+          <a href="papers/zhang_statediver.pdf"><img alt="Paper" src="images/file.svg" height=15px></a>
+        </span>
+        
         <!--
         <span class=pub-links>
           <a href="papers/dong:browser-isolation.pdf.html"><img alt="Paper" src="images/file.svg" height=15px></a>
@@ -208,6 +260,27 @@
         <p></p>      
       </div>
 
+
+    </ol>
+    <hr>
+
+    <h3>Others</h3>
+    <ol reversed>
+
+      <li>
+        <span class=pub-title>
+          One Flip is All It Takes: Identifying Syscall-Guard Variables for Data-Only Attacks
+        </span> <br> (Industry Conference)
+        <span class=pub-links>
+          <a href="https://www.blackhat.com/asia-24/briefings/schedule/index.html#one-flip-is-all-it-takes-identifying-syscall-guard-variables-for-data-only-attacks-36285"><img alt="Paper" src="./images/www.svg" height=15px></a>
+        </span> 
+        <br>
+        Hengkai Ye, Song Liu, <b>Zhechang Zhang</b> and Hong Hu
+        <br>
+        <span class=pub-conf>
+          Black Hat Asia Briefings (Black Hat Asia 2024)
+        </span>
+      </li>
 
     </ol>
     <hr>
