@@ -71,7 +71,7 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-\newcommand{\publicationref}[2]{\hyperref[#1]{#2 \underline{[\ref*{#1}]}}}
+\newcommand{\publicationref}[2]{\mbox{\hyperref[#1]{#2 \underline{[\ref*{#1}]}}}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -279,15 +279,15 @@ Huazhong University of Science and Technology
 %--------OPEN SOURCE PROJECTS------------
 \section{Open Source Projects}
 \begin{itemize}[leftmargin=*]
-  \item \textbf{ContractGuard}: Security auditing for MCP tools (\publicationref{pub:contractguard}{CCS 2026}).
+  \item \textbf{ContractGuard}: Audits MCP tools for security issues by comparing descriptions with implementations (\publicationref{pub:contractguard}{CCS 2026}).
     \href{https://github.com/PSU-Security-Universe/contractguard}{[\underline{Source Code}]}
-  \item \textbf{SACK}: A framework for evaluating control-flow integrity defenses (\publicationref{pub:sack}{NDSS 2026}).
+  \item \textbf{SACK}: Framework for systematically generating function substitution attacks against control-flow integrity (\publicationref{pub:sack}{NDSS 2026}).
     \href{https://github.com/PSU-Security-Universe/sack}{[\underline{Source Code}]}
-  \item \textbf{CountDown}: Refcount-guided fuzzing for temporal memory errors in the Linux kernel (\publicationref{pub:countdown}{CCS 2024}).
+  \item \textbf{CountDown}: Refcount-guided Linux kernel fuzzer for detecting temporal memory errors (\publicationref{pub:countdown}{CCS 2024}).
     \href{https://github.com/PSU-Security-Universe/countdown}{[\underline{Source Code}]}
-  \item \textbf{VIPER}: Identification of syscall-guard variables (\publicationref{pub:viper}{USENIX Security 2023}).
+  \item \textbf{VIPER}: Analysis framework for identifying syscall-guard variables (\publicationref{pub:viper}{USENIX Security 2023}).
     \href{https://github.com/PSU-Security-Universe/viper}{[\underline{Source Code}]}
-  \item \textbf{StateDiver}: State-discrepancy-guided testing of deep packet inspection systems (\publicationref{pub:statediver}{ACSAC 2022}).
+  \item \textbf{StateDiver}: State-discrepancy-guided testing framework for deep packet inspection systems (\publicationref{pub:statediver}{ACSAC 2022}).
     \href{https://github.com/CGCL-codes/StateDiver}{[\underline{Source Code}]}
 \end{itemize}
 
