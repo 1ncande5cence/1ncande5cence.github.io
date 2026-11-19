@@ -71,6 +71,8 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
+\newcommand{\publicationref}[2]{\hyperref[#1]{#2 \underline{[\ref*{#1}]}}}
+
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
@@ -87,28 +89,36 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{{\LARGE Zhechang Zhang}} \\
-  Ph.D. Student
+  Ph.D. Candidate
   & \href{mailto:zhechang@psu.edu}{zhechang@psu.edu}\\
   College of Information Sciences and Technology
   & \href{https://1ncande5cence.github.io/}{https://1ncande5cence.github.io/} \\
   The Pennsylvania State University
-  & E338 Westgate Building\\
+  & E338 Westgate Building, 288 Burrowes Rd\\
   & University Park, PA, 16802\\
 \end{tabular*}
+
+%-----------RESEARCH INTERESTS-----------------
+\section{Research Interests}
+\noindent My research focuses on systems and software security. I combine
+program analysis with large language models to characterize security-relevant
+program behavior. I use this approach to guide exploit generation, evaluate software
+defenses, identify security-critical data, and detect security issues in
+AI agent systems.
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {The Pennsylvania State University}{Pennsylvania, USA}
-      {Ph.D. Student in Informatics;
+      {Ph.D. Candidate in Informatics;
       GPA: 3.97/4.00}{Aug 2023 - Present}
   
-      \small {\textit{Research Area: 
-      System Security}}
+      \small {\textit{Proposal:
+      Leveraging High-Level Semantics for Exploit Generation and Defense Assessment}}
 
       \small {\textit{Advisor: 
-      Hong Hu}}
+      \href{https://huhong789.github.io/}{Hong Hu}}}
       
     \normalsize 
     \resumeSubheading
@@ -122,7 +132,8 @@
       Research on Vulnerability Discovery in Deep Packet Inspection Systems}}
 
       \small {\textit{Advisor: 
-      Deqing Zou and Bin Yuan}}
+      \href{http://faculty.hust.edu.cn/zoudeqing/en/index.htm}{Deqing Zou} and
+      \href{http://faculty.hust.edu.cn/yuanbin12/en/index.htm}{Bin Yuan}}}
       
     \normalsize  
     \resumeSubheading
@@ -149,29 +160,30 @@
 
 \vspace{-0.45cm}
 
-%-----------Research Interest-----------------
-\section{Research Interest}
-\hspace{1em} Software Security, System Security and Fuzzing
-%-------------------------------------------
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Research Assistant}, The Pennsylvania State University
+    (Advisor: \href{https://huhong789.github.io/}{Hong Hu})
+    \hfill \textit{\small Aug 2023 - Present}
 
-\vspace{-0.15cm}
+  \item \textbf{Research Assistant}, Shanghai Jiao Tong University
+    (Advisor: \href{https://lijuanru.com/}{Juanru Li})
+    \hfill \textit{\small June 2019 - Aug 2019}
+\end{itemize}
 
-
-
-%-------------------------------------------
-
-
+\vspace{-0.45cm}
 
 %-----------PUBLICATIONS-----------------
 \section{Refereed Conference Proceedings}
-\begin{enumerate}[leftmargin=*]
-\item[1] Hengkai Ye$^*$, \textbf{Zhechang Zhang}$^*$, Ruibo Lu, Jinyuan Jia and Hong Hu. ContractGuard: Auditing Semantic Contracts of MCP Tools for Security Violations. In \textit{Proceedings of the $33^{rd}$ ACM Conference on Computer and Communications Security} \textsl{(CCS'26)}, The Hague, The Netherlands, November 2026. \href{https://www.sigsac.org/ccs/CCS2026/program/accepted-papers.html}{[\underline{Link}]}
-\item[2] \textbf{Zhechang Zhang}, Hengkai Ye, Song Liu and Hong Hu. SACK: Systematic Generation of Function Substitution Attacks Against Control-Flow Integrity. In \textit{Proceedings of the $33^{rd}$ Annual Network and
-Distributed System Security Symposium} \textsl{(NDSS'26)}, San Diego, CA, USA, February 2026. \href{https://www.ndss-symposium.org/ndss-paper/sack-systematic-generation-of-function-substitution-attacks-against-control-flow-integrity/}{[\underline{Link}]}
-\item[3] Shuangpeng Bai, \textbf{Zhechang Zhang}, and Hong Hu. CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel. In \textit{Proceedings of the $31^{st}$ ACM Conference on Computer and Communications Security} \textsl{(CCS'24)}, Salt Lake City, UT, USA, October 2024. \href{https://dl.acm.org/doi/10.1145/3658644.3690320}{[\underline{Link}]}
-\item[4] Hengkai Ye, Song Liu, \textbf{Zhechang Zhang}, and Hong Hu. VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks. In \textit{Proceedings of the $32^{nd}$ USENIX Security Symposium} \textsl{(USENIX'23)}, Anaheim, CA, USA, August 2023. \href{https://www.usenix.org/system/files/usenixsecurity23-ye.pdf}{[\underline{Link}]}
-\item[5] \textbf{Zhechang Zhang}, Bin Yuan, Kehan Yang, Deqing Zou, and Hai Jin. StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance. In \textit{Proceedings of the $38^{th}$ Annual Computer Security
-Applications Conference} \textsl{(ACSAC'22)}, Austin, TX, USA, December 2022. \href{https://doi.org/10.1145/3564625.3564650}{[\underline{Link}]}
+\begin{enumerate}[leftmargin=*,label=\arabic*]
+\item\label{pub:contractguard} Hengkai Ye$^*$, \textbf{Zhechang Zhang}$^*$, Ruibo Lu, Jinyuan Jia and Hong Hu. ContractGuard: Auditing Semantic Contracts of MCP Tools for Security Violations. In \textit{Proceedings of the $33^{rd}$ ACM Conference on Computer and Communications Security} \textsl{(CCS'26)}, The Hague, The Netherlands, November 2026. \textcolor{red}{\textbf{(CCF-A)}}~\href{https://www.sigsac.org/ccs/CCS2026/program/accepted-papers.html}{[\underline{Link}]}
+\item\label{pub:sack} \textbf{Zhechang Zhang}, Hengkai Ye, Song Liu and Hong Hu. SACK: Systematic Generation of Function Substitution Attacks Against Control-Flow Integrity. In \textit{Proceedings of the $33^{rd}$ Annual Network and
+Distributed System Security Symposium} \textsl{(NDSS'26)}, San Diego, CA, USA, February 2026. \textcolor{red}{\textbf{(CCF-A)}}~\href{https://www.ndss-symposium.org/ndss-paper/sack-systematic-generation-of-function-substitution-attacks-against-control-flow-integrity/}{[\underline{Link}]}
+\item\label{pub:countdown} Shuangpeng Bai, \textbf{Zhechang Zhang}, and Hong Hu. CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel. In \textit{Proceedings of the $31^{st}$ ACM Conference on Computer and Communications Security} \textsl{(CCS'24)}, Salt Lake City, UT, USA, October 2024. \textcolor{red}{\textbf{(CCF-A)}}~\href{https://dl.acm.org/doi/10.1145/3658644.3690320}{[\underline{Link}]}
+\item\label{pub:viper} Hengkai Ye, Song Liu, \textbf{Zhechang Zhang}, and Hong Hu. VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks. In \textit{Proceedings of the $32^{nd}$ USENIX Security Symposium} \textsl{(USENIX'23)}, Anaheim, CA, USA, August 2023. \textcolor{red}{\textbf{(CCF-A)}}~\href{https://www.usenix.org/system/files/usenixsecurity23-ye.pdf}{[\underline{Link}]}
+\item\label{pub:statediver} \textbf{Zhechang Zhang}, Bin Yuan, Kehan Yang, Deqing Zou, and Hai Jin. StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance. In \textit{Proceedings of the $38^{th}$ Annual Computer Security
+Applications Conference} \textsl{(ACSAC'22)}, Austin, TX, USA, December 2022. \textbf{(CCF-B)}~\href{https://doi.org/10.1145/3564625.3564650}{[\underline{Link}]}
 \end{enumerate}
 %-------------------------------------------
 %$^{*}$
@@ -264,9 +276,30 @@ Huazhong University of Science and Technology
 
 \vspace{-0.55cm}
 
+%--------OPEN SOURCE PROJECTS------------
+\section{Open Source Projects}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{ContractGuard}: Security auditing for MCP tools (\publicationref{pub:contractguard}{CCS 2026}).
+    \href{https://github.com/PSU-Security-Universe/contractguard}{[\underline{Source Code}]}
+  \item \textbf{SACK}: A framework for evaluating control-flow integrity defenses (\publicationref{pub:sack}{NDSS 2026}).
+    \href{https://github.com/PSU-Security-Universe/sack}{[\underline{Source Code}]}
+  \item \textbf{CountDown}: Refcount-guided fuzzing for temporal memory errors in the Linux kernel (\publicationref{pub:countdown}{CCS 2024}).
+    \href{https://github.com/PSU-Security-Universe/countdown}{[\underline{Source Code}]}
+  \item \textbf{VIPER}: Identification of syscall-guard variables (\publicationref{pub:viper}{USENIX Security 2023}).
+    \href{https://github.com/PSU-Security-Universe/viper}{[\underline{Source Code}]}
+  \item \textbf{StateDiver}: State-discrepancy-guided testing of deep packet inspection systems (\publicationref{pub:statediver}{ACSAC 2022}).
+    \href{https://github.com/CGCL-codes/StateDiver}{[\underline{Source Code}]}
+\end{itemize}
+
+\vspace{-0.55cm}
+
 %--------CVE------------
 \section{CVE Discovered}
-\hspace{1em}CVE-2021-45098
+\noindent\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}lll@{}}
+  \textbf{CVE ID} & \textbf{Vulnerability Type} & \textbf{Affected Software} & \textbf{Affected Versions} \\
+  \href{https://nvd.nist.gov/vuln/detail/CVE-2021-45098}{\underline{CVE-2021-45098}} &
+  Interpretation Conflict & Suricata & 5.0.0--5.0.7, 6.0.0--6.0.3 \\
+\end{tabular*}
 
 %-------------------------------------------
 
