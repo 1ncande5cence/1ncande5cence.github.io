@@ -1,0 +1,275 @@
+%-------------------------
+% Resume in Latex
+% Author : Shubhi Rani
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+%\hypersetup{
+%colorlinks=true,linkcolor=black
+%}
+\hypersetup{hidelinks} 
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Zhechang Zhang}} \\
+  Ph.D. Student
+  & \href{mailto:zhechang@psu.edu}{zhechang@psu.edu}\\
+  College of Information Sciences and Technology
+  & \href{https://1ncande5cence.github.io/}{https://1ncande5cence.github.io/} \\
+  The Pennsylvania State University
+  & E338 Westgate Building\\
+  & University Park, PA, 16802\\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The Pennsylvania State University}{Pennsylvania, USA}
+      {Ph.D. Student in Informatics;
+      GPA: 3.97/4.00}{Aug 2023 - Present}
+  
+      \small {\textit{Research Area: 
+      System Security}}
+
+      \small {\textit{Advisor: 
+      Hong Hu}}
+      
+    \normalsize 
+    \resumeSubheading
+      {Huazhong University of Science and Technology}{Wuhan, China}
+      {Master of Engineering in Software Security;
+      GPA: 3.77/4.00 (85.95/100)}{Sept 2020 - June 2023}
+      %{\scriptsize \textit{Research Area: 
+      %Network Security, Deep Packet Inspection System, Protocol Fuzzing, Software Security}}  
+      
+      \small {\textit{Thesis: 
+      Research on Vulnerability Discovery in Deep Packet Inspection Systems}}
+
+      \small {\textit{Advisor: 
+      Deqing Zou and Bin Yuan}}
+      
+    \normalsize  
+    \resumeSubheading
+      {Huazhong University of Science and Technology}{Wuhan, China}
+      {Bachelor of Engineering in Information Security;  GPA: 3.95/4.00 (90.7/100 - Rank: 1$^{st}$/78)}{Sept 2016 - June 2020}
+      
+%      {\scriptsize \textit{Courses: Calculus, 
+%      Probability Theory and Mathematical Statistics, 
+%      Discrete Mathematics,
+%      Linear Algebra,
+%      Data Structure,
+%      Operating System,
+%      Computer Telecommunications and Network,
+%      Principles of Compilers,
+%      Cryptography and Network Security.}}
+      
+      %{\scriptsize \textit{Thesis: 
+      %Fuzzing for Signature-based Network %Intrusion Detection Systems}}  
+      \small {\textit{Thesis: 
+      Fuzzing for Signature-based Network Intrusion Detection Systems}}
+      \normalsize
+  \resumeSubHeadingListEnd
+%-------------------------------------------
+
+\vspace{-0.45cm}
+
+%-----------Research Interest-----------------
+\section{Research Interest}
+\hspace{1em} Software Security, System Security and Fuzzing
+%-------------------------------------------
+
+\vspace{-0.15cm}
+
+
+
+%-------------------------------------------
+
+
+
+%-----------PUBLICATIONS-----------------
+\section{Refereed Conference Proceedings}
+\begin{enumerate}[leftmargin=*]
+\item[1] Hengkai Ye$^*$, \textbf{Zhechang Zhang}$^*$, Ruibo Lu, Jinyuan Jia and Hong Hu. ContractGuard: Auditing Semantic Contracts of MCP Tools for Security Violations. In \textit{Proceedings of the $33^{rd}$ ACM Conference on Computer and Communications Security} \textsl{(CCS'26)}, The Hague, The Netherlands, November 2026. \href{https://www.sigsac.org/ccs/CCS2026/program/accepted-papers.html}{[\underline{Link}]}
+\item[2] \textbf{Zhechang Zhang}, Hengkai Ye, Song Liu and Hong Hu. SACK: Systematic Generation of Function Substitution Attacks Against Control-Flow Integrity. In \textit{Proceedings of the $33^{rd}$ Annual Network and
+Distributed System Security Symposium} \textsl{(NDSS'26)}, San Diego, CA, USA, February 2026. \href{https://www.ndss-symposium.org/ndss-paper/sack-systematic-generation-of-function-substitution-attacks-against-control-flow-integrity/}{[\underline{Link}]}
+\item[3] Shuangpeng Bai, \textbf{Zhechang Zhang}, and Hong Hu. CountDown: Refcount-guided Fuzzing for Exposing Temporal Memory Errors in Linux Kernel. In \textit{Proceedings of the $31^{st}$ ACM Conference on Computer and Communications Security} \textsl{(CCS'24)}, Salt Lake City, UT, USA, October 2024. \href{https://dl.acm.org/doi/10.1145/3658644.3690320}{[\underline{Link}]}
+\item[4] Hengkai Ye, Song Liu, \textbf{Zhechang Zhang}, and Hong Hu. VIPER: Spotting Syscall-Guard Variables for Data-Only Attacks. In \textit{Proceedings of the $32^{nd}$ USENIX Security Symposium} \textsl{(USENIX'23)}, Anaheim, CA, USA, August 2023. \href{https://www.usenix.org/system/files/usenixsecurity23-ye.pdf}{[\underline{Link}]}
+\item[5] \textbf{Zhechang Zhang}, Bin Yuan, Kehan Yang, Deqing Zou, and Hai Jin. StateDiver: Testing Deep Packet Inspection Systems with State-Discrepancy Guidance. In \textit{Proceedings of the $38^{th}$ Annual Computer Security
+Applications Conference} \textsl{(ACSAC'22)}, Austin, TX, USA, December 2022. \href{https://doi.org/10.1145/3564625.3564650}{[\underline{Link}]}
+\end{enumerate}
+%-------------------------------------------
+%$^{*}$
+$^*$Equal contribution.
+%-----------Others-----------------
+\section{Poster and Industrial Conference}
+\begin{enumerate}[leftmargin=*]
+\item[1] \textbf{Zhechang Zhang} and Hong Hu. How Close Are We? Measuring the Gap Between Dynamically and Statically Identified Indirect-Call Targets. (Poster) In \textit{USENIX 2026}, Baltimore, MD, USA, August 2026. \href{https://www.usenix.org/conference/usenixsecurity26/poster-session}{[\underline{Link}]}
+\item[2] Hengkai Ye, Song Liu, \textbf{Zhechang Zhang}, and Hong Hu. One Flip is All It Takes. (Industry Conference) In \textit{Black Hat Asia Briefings}, Singapore, April 2024. \href{https://www.blackhat.com/asia-24/briefings/schedule/index.html#one-flip-is-all-it-takes-identifying-syscall-guard-variables-for-data-only-attacks-36285}{[\underline{Link}]}
+\end{enumerate}
+%-------------------------------------------
+
+
+\vspace{-0.45cm}
+
+%-----------Awards-----------------
+\section{Honors and Awards}
+\begin{itemize}[leftmargin=*]
+\item {\textbf{2026 Spring Travel Award}, 
+IST, The Pennsylvania State University
+}
+
+\item {\textbf{2023, 2020 Outstanding Graduates}, 
+Huazhong University of Science and Technology
+}
+
+\item {\textbf{2022, 2018 National Scholarship}, 
+China Ministry of Education
+(\textbf{0.1\%})}
+
+\item {\textbf{2022 Champion} in the $17^{th}$ Challenge Cup Special Contest, 
+China Ministry of Education
+(\textbf{Rank 1/32})}
+
+
+\item {\textbf{2018 Outstanding Student}, 
+Huazhong University of Science and Technology
+(\textbf{1\%})}
+
+
+\end{itemize}
+%-------------------------------------------
+
+\vspace{-0.45cm}
+
+
+%%--------SKILLS------------
+%\section{Skills Summary}
+%	\resumeSubHeadingListStart
+%	\resumeSubItem{Programming Skills}{C/C++, Python, SQL, Bash, LaTeX, Markdown, Git, Linux}
+%	\resumeSubItem{English Proficiency}{TOEFL iBT 104/120 (Reading 29, Listening 29, Speaking 22, Writing 24)}
+%	
+%    \resumeSubHeadingListEnd
+
+%-------------------------------------------
+
+%\vspace{-0.45cm}
+
+
+%--------Community Service ------------
+\section{Community Service}
+\begin{itemize}[leftmargin=*]
+    
+    \item {External Reviewer}
+
+    USENIX Security Symposium (USENIX Security) \hfill [2025, 2026]
+    
+    Network and Distributed System Security Symposium (NDSS) \hfill [2024, 2025, 2026]
+
+    ACM Conference on Computer and Communications Security (CCS) \hfill [2024, 2025]
+
+    International Conference on Applied Cryptography and Network Security (ACNS) \hfill [2026]
+
+    International Symposium on Research in Attacks, Intrusions and Defense (RAID) \hfill [2026]
+    
+    IEEE Transactions on Dependable and Secure Computing (TDSC) \hfill [2023]
+
+    \item {Program Committee}
+
+    IEEE International Conference on Parallel and Distributed Systems (ICPADS) \hfill [2026]
+    
+    \item {Teaching Assistant}
+
+    Operating System, HUST \hfill [Fall 2019]
+
+\end{itemize}
+
+%-------------------------------------------
+
+
+\vspace{-0.55cm}
+
+%--------CVE------------
+\section{CVE Discovered}
+\hspace{1em}CVE-2021-45098
+
+%-------------------------------------------
+
+
+
+\end{document}
